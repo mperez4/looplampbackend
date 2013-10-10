@@ -18,7 +18,7 @@ server.start(function(post){
 
 	//if the behavior mode is twitter
 	if(data.mode == 'twitter'){
-		console.log("got in here because the mode was twitter");
+		
 		//if the behavior data is new
 		if(typeof data.loadPreset === 'undefined'){
 			var filename = (typeof data.savePreset === 'undefined') ? "behavior.json" : data.savePreset;
@@ -67,10 +67,10 @@ twitterHand.onTweetReceived('filter', initialBehavior.tracking, function(tweetDa
 function respondToTweet(tweetData){
 	
 	//only make the lamp active if it is dormant
-	//if(!lamp.isActive){
+	if(!lamp.isActive){
 		twitterHand.log(tweetData);
 
 		//logic for flashing lights goes here...
 		lamp.setActive();
-	//}
+	}
 }

@@ -11,8 +11,9 @@
 		}
 	},
 	"active": {
+		"activeTime": 1000,
 		"animation": true,
-		"time": 1000,
+		"animationTime": 1000,
 		"fluid": true,
 		"begin":{
 			"color":{
